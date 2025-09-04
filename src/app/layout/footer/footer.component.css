@@ -1,0 +1,64 @@
+:host {
+  --primary-color: #0d2c4f; /* O mesmo azul escuro do header */
+  --footer-text-color: #ccc; /* Um cinza claro para o texto do footer */
+}
+
+.footer-container {
+  background-color: var(--primary-color); /* Mesma cor do header */
+  color: var(--footer-text-color); /* Cor do texto do footer */
+  padding: 3rem 5% 0;
+}
+
+.footer-content {
+  display: flex; /* Exibe o conteúdo do footer em flexbox */
+  justify-content: space-between; /* Alinha os itens do footer */
+  gap: 2rem; /* Espaçamento entre os itens do footer */
+  max-width: 1200px; /* Mesma largura do header */
+  margin: 0 auto;
+  flex-wrap: wrap; /* Para se adaptar a telas menores */
+}
+
+.footer-section {
+  flex: 1; /* Permite que as seções do footer cresçam igualmente */
+  min-width: 250px; /* Garante que não fiquem muito espremidos */
+}
+
+.footer-logo {
+  max-height: 50px;
+  margin-bottom: 1rem;
+  
+}
+
+.footer-section h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+  line-height: 2;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #2a4a6e;
+  font-size: 0.9rem;
+}

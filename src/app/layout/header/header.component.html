@@ -1,1 +1,19 @@
-<p>header works!</p>
+<header class="header-container">
+  <div class="header-content">
+    <a routerLink="/" class="logo">
+      <img src="assets/images/logo.png" alt="Logo E.Rezende Esquadrias">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Início</a></li>
+        <li><a routerLink="/sobre" routerLinkActive="active-link">Sobre Nós</a></li>
+        <li><a routerLink="/servicos" routerLinkActive="active-link">Serviços</a></li>
+        <li><a routerLink="/portfolio" routerLinkActive="active-link">Portfólio</a></li>
+        <li><a routerLink="/contato" routerLinkActive="active-link">Contato</a></li>
+      </ul>
+    </nav>
+    <a href="https://wa.me/5521992609231" target="_blank" class="cta-button">
+      Solicitar Orçamento
+    </a>
+  </div>
+</header>

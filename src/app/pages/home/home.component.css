@@ -1,0 +1,169 @@
+/* Importante: As variáveis de cor foram definidas no header/footer,
+   mas para usar aqui, precisamos redefinir ou criar um arquivo global.
+   Por simplicidade, vamos usá-las diretamente por enquanto. */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url(../../../assets/images/imagemfotorrealista.png); /* IMAGEM PRINCIPAL AQUI */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 44, 79, 0.7); /* Overlay azul escuro semi-transparente */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-cta-button {
+  background-color: #1a73e8; /* Azul */
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero-cta-button:hover {
+  background-color: #0d5cbf;
+}
+
+/* Seções Padrão */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #0d2c4f; /* Azul escuro */
+}
+
+/* Services Overview */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #0d2c4f;
+  margin-bottom: 1rem;
+}
+
+/* About Overview */
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-text, .about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+/* Portfolio Overview */
+.portfolio-overview-section {
+  background-color: #f0f4f8; /* Fundo levemente azulado/cinza */
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.portfolio-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Botões Reutilizáveis */
+.main-button, .secondary-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.main-button {
+  background-color: #1a73e8;
+  color: #fff;
+}
+.main-button:hover {
+  background-color: #0d5cbf;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #1a73e8;
+  border: 2px solid #1a73e8;
+}
+.secondary-button:hover {
+  background-color: #1a73e8;
+  color: #fff;
+}

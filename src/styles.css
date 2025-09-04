@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+body {
+  /* Define a fonte padrão para todos os parágrafos e textos normais */
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased; /* Deixa a fonte mais suave em alguns navegadores */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* Define a fonte para todos os títulos */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Você também pode ser mais específico */
+.cta-button, .main-button, .secondary-button {
+    font-family: 'Montserrat', sans-serif; /* Para os botões usarem a fonte de título */
+}
