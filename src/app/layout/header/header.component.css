@@ -8,12 +8,45 @@
 
 .header-container {
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1rem 5%;
-  position: sticky;
+  padding: 1.5rem 5%; /* Aumentamos um pouco o padding para mais respiro */
+  position: relative; /* Mudamos para relative para evitar sobreposição inicial */
   top: 0;
+  left: 0;
   z-index: 1000;
+  background-color: transparent; /* Fundo transparente por padrão */
+  box-shadow: none; /* Sem sombra por padrão */
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease; /* Transição suave */
+}
+
+/* ESTILO QUANDO A PÁGINA É ROLADA */
+.header-container.scrolled {
+  background-color: #ffffff;
+  padding: 1rem 5%; /* Padding um pouco menor quando rolado */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes no texto para garantir a legibilidade quando o header está transparente */
+.main-nav a {
+  color: #fff; /* Cor do texto branca por padrão */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Sombra no texto para contraste */
+  /* ... o resto do estilo ... */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Cor do texto quando o header fica branco */
+.header-container.scrolled .main-nav a {
+  color: var(--text-color);
+  text-shadow: none;
+}
+
+.header-container.scrolled .main-nav a:hover {
+  color: var(--accent-color);
+}
+
+.header-container.scrolled .active-link {
+  color: var(--accent-color);
 }
 
 .header-content {
@@ -21,12 +54,12 @@
   
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
 .logo img {
-  max-height: 60px; /* Ajuste a altura do logo conforme necessário */
+  max-height: 80px; /* Ajuste a altura do logo conforme necessário */
   
 }
 
